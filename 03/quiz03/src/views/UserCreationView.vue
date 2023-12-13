@@ -62,7 +62,7 @@ export default defineComponent({
     };
 
     const canConfirmUsers = computed(() => {
-      return creatingUsers.value.every(
+      return creatingUsers.value.some(
         (user: User, index: any) =>
           isValidForm(user) && !checkDuplicateName(user.userName, index)
       );
