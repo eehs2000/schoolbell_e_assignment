@@ -5,16 +5,13 @@ document.querySelector("#target-1").classList.remove("border");
 document.querySelector("#target-1").style.left = "250px";
 
 //3
-document.querySelectorAll(".target-2").forEach((el) => {
-  el.classList.remove("border");
-  el.classList.add("blue");
-});
+let target2 = document.querySelector("#target-2");
+target2.classList.remove("border");
+target2.classList.add("blue");
 
 //4
-document.querySelectorAll(".target-2").forEach((el) => {
-  el.style.left = "50px";
-  el.style.marginTop = "-15px";
-});
+target2.style.left = "50px";
+target2.style.marginTop = "-15px";
 
 //5
 let target3 = document.querySelector("#target-3");

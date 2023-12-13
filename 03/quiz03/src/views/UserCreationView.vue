@@ -31,12 +31,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
-import { useUserCreation, User } from '../scripts/userCreationScript';
-import UserCreationCard from '../components/UserCreationCard.vue';
+import { defineComponent, computed } from "vue";
+import { useUserCreation, User } from "../scripts/userCreationScript";
+import UserCreationCard from "../components/UserCreationCard.vue";
 
 export default defineComponent({
-  name: 'UserCreationView',
+  name: "UserCreationView",
   components: {
     UserCreationCard,
   },
@@ -63,13 +63,13 @@ export default defineComponent({
 
     const canConfirmUsers = computed(() => {
       return creatingUsers.value.every(
-        (user, index) =>
+        (user: User, index: any) =>
           isValidForm(user) && !checkDuplicateName(user.userName, index)
       );
     });
 
     const convertPwd = (pwd: string) => {
-      return pwd.substring(0, 3) + '*'.repeat(pwd.length - 3);
+      return pwd.substring(0, 3) + "*".repeat(pwd.length - 3);
     };
 
     return {
