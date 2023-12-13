@@ -5,7 +5,7 @@ document.querySelector("#target-1").classList.remove("border");
 document.querySelector("#target-1").style.left = "250px";
 
 //3
-let target2 = document.querySelector("#target-2");
+let target2 = document.querySelector(".target-2");
 target2.classList.remove("border");
 target2.classList.add("blue");
 
